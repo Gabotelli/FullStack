@@ -8,7 +8,6 @@ const Country = ({country, show}) => {
     const lang=country.languages
     const handleShow = (event) => {
         event.preventDefault()
-        console.log('hola')
         setShowDetails(!show)
     }
 

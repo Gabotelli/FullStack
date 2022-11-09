@@ -14,7 +14,7 @@ const App = () => {
       .get('https://restcountries.com/v3.1/all')
       .then(response => setCountries(response.data))
   },[])
-//<p>{countries.filter(c => c.name.official.toLowerCase().indexOf(country.toLowerCase()) >= 0).map(country => country.name.official)}</p>
+
   return (
     <div>  
       <Filter value={country} onChange={handleCountry} />
