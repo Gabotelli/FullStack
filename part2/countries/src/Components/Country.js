@@ -1,6 +1,8 @@
 import Languages from './Languages'
 import Currencies from './Currencies'
+import Weather from './Weather'
 import { useState } from 'react'
+
 const Country = ({country, show}) => {
     const [showDetails, setShowDetails] = useState(show)
     const lang=country.languages
@@ -25,6 +27,7 @@ const Country = ({country, show}) => {
             <h3>Languages:</h3>
                 <Languages lang={ lang } />
             <img src={country.flags.png} alt={country.name.common} width='20%' height='20%'/>
+            <Weather country={country} />
     </div>)
 }
 
