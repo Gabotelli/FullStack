@@ -49,7 +49,7 @@ const App = () => {
       <Filter filter={newFilter} onChange={handleNewFilter}/>
       <Form addPerson={addPerson} newName={newName} newNumber={newNumber} handleNewName={handleNewName} handleNewNumber={handleNewNumber} />
       <h2>Numbers</h2>
-      <Persons persons={persons} newFilter={newFilter} />
+      <Persons persons={persons} newFilter={newFilter} setPersons={setPersons}/>
     </div>
   )
 }
