@@ -23,11 +23,16 @@ const App = () => {
       name: newName,
       number: newNumber,
     }
-    if(persons.find(person => person.name === newName)) {
-      if(window.confirm('is added')) {
+    const p = persons.find(person => person.name === newName)
+    if(p) {
+      if(window.confirm(`${newName} is already added, do you want to change the number?`)) {
         personService
-          .update(personObject)
-          .then()
+          .update(personObject, p.id)
+          .then(() => {
+            personService.getAll()
+              .then(data => setPersons(data))
+          }
+          )
       }
     }
     else {

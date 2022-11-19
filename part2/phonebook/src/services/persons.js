@@ -12,8 +12,8 @@ const erase = id => {
     const r = axios.delete(`${url}/${id}`)
     return r.then(response => response.data)
 }
-const update = updatePerson => {
-    const r = axios.put(`${url}/${updatePerson.id}`)
+const update = (person, id) => {
+    const r = axios.put(`${url}/${id}`,person)
     return r.then(response => response.data)
 }
 export default {getAll, addNew, erase, update}
