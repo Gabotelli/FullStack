@@ -22,3 +22,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local environment files (keep only a key-free example)
+.env.*
+!.env.example
